@@ -1,12 +1,51 @@
----
-layout: default
----
-<div class="post">
+<!DOCTYPE html>
+<html>
 
-  <ul class="gallery">
-    {% for image in page.images %}
-      <li><img src="{{ site.baseurl }}/images/gallery/{{ image.path }}" alt="{{ image.title}}"/></li>
-    {% endfor %}
-  </ul>
+  <head>
+    {% include head.html %}
+    <link rel="stylesheet" href="{{ "/assets/css/magnific-popup.css" | prepend: site.baseurl }}">
+    <script src="{{ "/assets/js/jquery-3.2.1.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/js/jquery.magnific-popup.js" | prepend: site.baseurl }}"></script>
+  </head>
 
-</div>
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+          <ul class="gallery">
+            {% for image in page.images %}
+              <li>
+                <a href="{{ site.baseurl }}/images/gallery/{{ image.path }}">
+                  <img src="{{ site.baseurl }}/images/gallery/{{ image.path }}" alt="{{ image.title}}"/>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    <script>
+      $(document).ready(function() {
+        $('ul.gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1]
+          }
+        });
+      });
+    </script>
+
+  </body>
+
+</html>
