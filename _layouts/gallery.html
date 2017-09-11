@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<div class="post">
+
+  <ul class="gallery">
+    {% for image in page.images %}
+      <li><img src="{{ site.baseurl }}/images/gallery/{{ image.path }}" alt="{{ image.title}}"/></li>
+    {% endfor %}
+  </ul>
+
+</div>
