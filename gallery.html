@@ -1,13 +1,30 @@
 ---
-layout: default
 title: Gallery
 permalink: /gallery/
 ---
 
-<div class="home">
+<!DOCTYPE html>
+<html>
 
-  <ul class="post-list">
-    {% for post in site.categories.gallery %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
+  <link rel="shortcut icon" type="image/png" href="{{ "/assets/favicon.png" | prepend: site.baseurl }}">
+</head>
+
+<body>
+
+  <div class="home">
+
+    <ul class="post-list">
+      {% for post in site.categories.gallery %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
@@ -15,7 +32,11 @@ permalink: /gallery/
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
       </li>
-    {% endfor %}
-  </ul>
+      {% endfor %}
+    </ul>
 
-</div>
+  </div>
+
+</body>
+
+</html>
