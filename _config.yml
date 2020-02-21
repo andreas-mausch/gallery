@@ -1,0 +1,9 @@
+# Site settings
+title: Andreas Mausch Gallery
+email: andreas.mausch@gmail.com
+description: ""
+baseurl: ""
+url: "https://gallery.andreas-mausch.de"
+
+markdown: kramdown
+permalink: pretty
