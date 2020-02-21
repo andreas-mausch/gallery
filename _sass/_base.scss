@@ -194,3 +194,19 @@ pre {
         }
     }
 }
+
+ul.gallery {
+  list-style-type: none;
+}
+
+ul.gallery li {
+  display: inline;
+}
+
+ul.gallery img {
+  width: 144px;
+  height: 144px;
+  margin-right: 4px;
+  margin-bottom: 8px;
+  object-fit: cover;
+}
