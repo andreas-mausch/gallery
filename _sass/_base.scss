@@ -18,6 +18,7 @@ body {
     font-size: $base-font-size;
     line-height: $base-line-height;
     font-weight: 400;
+    padding: $spacing-unit * 2;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
@@ -191,6 +192,19 @@ pre {
 
         path {
             fill: $grey-color;
+        }
+    }
+}
+
+ul.folder {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: 8px;
+
+        > h2 {
+          margin-bottom: 0;
         }
     }
 }
