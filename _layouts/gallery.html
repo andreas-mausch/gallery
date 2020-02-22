@@ -21,7 +21,8 @@
 <body>
 
   <ul class="gallery">
-    {% capture gallery_path %}assets/gallery/{{ page.folder }}{% endcapture %}
+    {% capture folder %}{{ page.relative_path | remove: '_posts/' | remove: '.md' }}{% endcapture %}
+    {% capture gallery_path %}assets/gallery/{{ folder }}{% endcapture %}
     {% for image in site.static_files %}
     {% if image.path contains gallery_path %}
     <li>

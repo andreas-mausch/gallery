@@ -7,5 +7,4 @@ tags:
 - segeberger forst
 - forest
 title: "Segeberger Forst"
-folder: 2014-07-10-segeberger-forst
 ---

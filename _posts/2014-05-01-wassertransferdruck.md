@@ -8,5 +8,4 @@ tags:
 - ps3
 - playstation
 title: "Wassertransferdruck"
-folder: 2014-05-01-wassertransferdruck
 ---
