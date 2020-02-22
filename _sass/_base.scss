@@ -212,16 +212,15 @@ ul.folder {
 ul.gallery {
   margin-left: 0;
   list-style-type: none;
-}
-
-ul.gallery li {
-  display: inline;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 ul.gallery img {
-  width: 144px;
-  height: 144px;
-  margin-right: 4px;
-  margin-bottom: 8px;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 6px;
   object-fit: cover;
 }

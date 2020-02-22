@@ -8,3 +8,8 @@ body {
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
 }
+
+ul.gallery img {
+  width: 160px;
+  height: 160px;
+}
