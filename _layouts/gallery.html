@@ -9,10 +9,10 @@
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
   <link rel="stylesheet" href="https://unpkg.com/magnific-popup@1.1.0/dist/magnific-popup.css">
 
-  <link rel="shortcut icon" type="image/png" href="{{ "/assets/favicon.png" | prepend: site.baseurl }}">
+  <link rel="shortcut icon" type="image/png" href="{{ "/assets/favicon.png" | relative_url }}">
 
   <script src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script>
   <script src="https://unpkg.com/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
@@ -23,8 +23,8 @@
   <ul class="gallery">
     {% for image in page.images %}
     <li>
-      <a href="{{ site.baseurl }}/assets/gallery/{{ image.path }}">
-        <img src="{{ site.baseurl }}/assets/gallery/{{ image.path }}" alt="{{ image.title}}" />
+      <a href="{{ "/assets/gallery/" | relative_url }}{{ image.path }}">
+        <img src="{{ "/assets/gallery/" | relative_url }}{{ image.path }}" alt="{{ image.title }}" />
       </a>
     </li>
     {% endfor %}

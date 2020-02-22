@@ -13,9 +13,9 @@ title: Gallery
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
 
-  <link rel="shortcut icon" type="image/png" href="{{ "/assets/favicon.png" | prepend: site.baseurl }}">
+  <link rel="shortcut icon" type="image/png" href="{{ "/assets/favicon.png" | relative_url }}">
 </head>
 
 <body>
@@ -26,7 +26,7 @@ title: Gallery
       <span>{{ post.date | date: "%b %-d, %Y" }}</span>
 
       <h2>
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </h2>
     </li>
     {% endfor %}
