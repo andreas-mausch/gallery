@@ -40,7 +40,21 @@
 
   <script>
     $(document).ready(function () {
-      $('ul.gallery').photoSwipe('li>a');
+      $('ul.gallery').photoSwipe('li>a', {
+        bgOpacity: 0.8,
+        closeEl: false,
+        captionEl: false,
+        fullscreenEl: false,
+        zoomEl: false,
+        shareEl: false,
+        showAnimationDuration: 0,
+        hideAnimationDuration: 0,
+        barsSize: {
+          top: 0,
+          bottom: 0
+        },
+        mainClass: 'pswp--minimal--dark'
+      });
     });
   </script>
 
