@@ -21,12 +21,15 @@
 <body>
 
   <ul class="gallery">
-    {% for image in page.images %}
+    {% capture gallery_path %}assets/gallery/{{ page.folder }}{% endcapture %}
+    {% for image in site.static_files %}
+    {% if image.path contains gallery_path %}
     <li>
-      <a href="{{ "/assets/gallery/" | relative_url }}{{ image.path }}">
-        <img src="{{ "/assets/gallery/" | relative_url }}{{ image.path }}" alt="{{ image.title }}" />
+      <a href="{{ image.path | relative_url }}">
+        <img src="{{ image.path | relative_url }}" alt="{{ image.title }}" />
       </a>
     </li>
+    {% endif %}
     {% endfor %}
   </ul>
 
