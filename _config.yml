@@ -1,4 +1,3 @@
-# Site settings
 title: Andreas Mausch Gallery
 email: andreas.mausch@gmail.com
 description: ""
@@ -7,3 +6,12 @@ url: "https://gallery.andreas-mausch.de"
 
 markdown: kramdown
 permalink: pretty
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
