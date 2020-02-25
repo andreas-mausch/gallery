@@ -13,5 +13,6 @@ exclude:
   - CNAME
   - Gemfile
   - Gemfile.lock
+  - generate-thumbnails.sh
   - README.md
   - vendor/

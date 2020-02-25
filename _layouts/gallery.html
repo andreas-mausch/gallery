@@ -23,9 +23,10 @@
     {% capture gallery_path %}assets/gallery/{{ folder }}{% endcapture %}
     {% for image in site.static_files %}
     {% if image.path contains gallery_path %}
+    {{ image.dimensions.width }}
     <li>
       <a href="{{ image.path | relative_url }}">
-        <img src="{{ image.path | relative_url }}" alt="{{ image.title }}" />
+        <img src="{{ image.path | replace: 'assets/gallery/', 'assets/thumbnails/' | relative_url }}" />
       </a>
     </li>
     {% endif %}
