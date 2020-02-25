@@ -10,8 +10,7 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
   <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
-  <link rel="stylesheet" href="https://unpkg.com/photoswipe@4.1.3/dist/photoswipe.css">
-  <link rel="stylesheet" href="https://unpkg.com/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+  <link rel="stylesheet" href="https://unpkg.com/imagelightbox@1.0.2/dist/imagelightbox.min.css">
 
   <link rel="shortcut icon" type="image/png" href="{{ "/assets/favicon.png" | relative_url }}">
 
@@ -36,25 +35,16 @@
   <a href="{{ "/" | relative_url }}">&lt; Back</a>
 
   <script src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script>
-  <script src="https://unpkg.com/jquery.photoswipe@1.1.1/dist/jquery.photoswipe-global.js"></script>
+  <script src="https://unpkg.com/imagelightbox@1.0.2/dist/imagelightbox.min.js"></script>
 
   <script>
     $(document).ready(function () {
-      $('ul.gallery').photoSwipe('li>a', {
-        bgOpacity: 0.8,
-        closeEl: false,
-        captionEl: false,
-        fullscreenEl: false,
-        zoomEl: false,
-        shareEl: false,
-        showAnimationDuration: 0,
-        hideAnimationDuration: 0,
-        barsSize: {
-          top: 0,
-          bottom: 0
-        },
-        mainClass: 'pswp--minimal--dark',
-        tapToClose: true
+      $('ul.gallery>li>a').imageLightbox({
+        animationSpeed: 50,
+        fullscreen: true,
+        history: true,
+        overlay: true,
+        quitOnImgClick: true
       });
     });
   </script>
